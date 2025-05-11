@@ -18,7 +18,36 @@ A Python script to clean and transform (normalize) filenames in a directory by a
 ## Usage
 
 ```bash
-python main.py [OPTIONS] [TARGET_DIR]
+❯ python src/main.py
+usage: main.py [-h] [-D] [-v] [-s] [-u] [-n] [-a] [-l] [-d] [-e [EXTENSIONS ...]] [-S] [-U] [-c] target_dir
+main.py: error: the following arguments are required: target_dir
+
+❯ python src/main.py --help
+usage: main.py [-h] [-D] [-v] [-s] [-u] [-n] [-a] [-l] [-d] [-e [EXTENSIONS ...]] [-S] [-U] [-c] target_dir
+
+Clean and asciify Turkish filenames in a directory
+
+positional arguments:
+  target_dir            Target directory to scan and rename files
+
+options:
+  -h, --help            show this help message and exit
+  -D, --dry-run         Simulate renaming without changing files
+  -v, --verbose         Increase verbosity level (use -v, -vv)
+  -s, --collapse-spaces
+                        Collapse multiple spaces into a single space
+  -u, --underscore      Replace spaces with underscores
+  -n, --no-asciify      Disable Turkish asciify
+  -a, --remove-non-ascii
+                        Remove all non-ASCII characters (like emojis)
+  -l, --lowercase       Lowercase all filenames
+  -d, --process-dirs    Apply transformations to directory names too
+  -e [EXTENSIONS ...], --extensions [EXTENSIONS ...]
+                        Only process files with these extensions (e.g., --extensions .jpg .txt)
+  -S, --safe-chars-only
+                        Allow only safe chars (a-zA-Z0-9-_.), remove others
+  -U, --replace-unsafe  Replace unsafe chars with underscore instead of removing
+  -c, --camelcase       Convert filename into camelCase (after other transformations)
 ```
 
 ### Usage Examples
@@ -42,22 +71,6 @@ python main.py ~/my-folder --collapse-spaces --no-asciify
 # Simulate renaming files and directories in `~/my-folder`, collapsing spaces, replacing them with underscores, converting them to lowercase, and only processing `.txt` and `.md` files:
 python main.py ~/my-folder --dry-run --collapse-spaces --underscore --lowercase --process-dirs --extensions .txt .md
 ```
-
-### Arguments:
-
-- **TARGET_DIR**: The directory to scan and rename files.
-- **-D, --dry-run**: Simulate renaming without actually changing the files.
-- **-v, --verbose**: Increase verbosity level (e.g., use `-v` or `-vv`).
-- **-s, --collapse-spaces**: Collapse multiple spaces into a single space.
-- **-u, --underscore**: Replace spaces with underscores.
-- **-c, --camelcase**: Convert filenames to camelCase after collapsing spaces.
-- **-n, --no-asciify**: Disable the Turkish asciify transformation.
-- **-a, --remove-non-ascii**: Remove all non-ASCII characters (like emojis).
-- **-l, --lowercase**: Convert filenames to lowercase.
-- **-d, --process-dirs**: Apply transformations to directory names too.
-- **-e, --extensions**: Only process files with these extensions (e.g., `--extensions .jpg .txt`).
-- **-v**: Displays more detailed output.
-- **-vv**: Displays very detailed output, including skipping unchanged files and directories.
 
 ## Requirements
 
