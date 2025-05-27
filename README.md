@@ -2,7 +2,7 @@
 
 This Python script automatically performs various operations on a large number (possibly thousands) of filenames within a directory and its subdirectories — such as converting Turkish-specific characters to their ASCII equivalents, removing spaces or replacing them with underscores, and transforming filenames into camelCase format. It helps you prevent filename compatibility issues on systems that do not support Turkish-specific characters (such as İ, Ğ, Ü, Ö, Ç, Ş, etc.).
 
-Turkish: Bu Python betiği, bir dizin ve alt dizinlerindeki çok sayıda (binlerce olabilir) dosya adı üzerinde; Türkçeye özgü karakterleri ASCII karşılıklarına dönüştürme, boşlukları kaldırma veya alt çizgiyle değiştirme, dosya adlarını camelCase formatına çevirme gibi işlemleri otomatik olarak gerçekleştirir. Böylece, Türkçeye özgü (İ, Ğ, Ü, Ö, Ç, Ş vb.) karakterleri desteklemeyen sistemlerde karşılaşılabilecek dosya adı uyumluluk problemlerinin önüne geçmenize yardımcı olur.
+**Turkish:** Bu Python betiği, bir dizin ve alt dizinlerindeki çok sayıda (binlerce olabilir) dosya adı üzerinde; Türkçeye özgü karakterleri ASCII karşılıklarına dönüştürme, boşlukları kaldırma veya alt çizgiyle değiştirme, dosya adlarını camelCase formatına çevirme gibi işlemleri otomatik olarak gerçekleştirir. Böylece, Türkçeye özgü (İ, Ğ, Ü, Ö, Ç, Ş vb.) karakterleri desteklemeyen sistemlerde karşılaşılabilecek dosya adı uyumluluk problemlerinin önüne geçmenize yardımcı olur.
 
 ## Features
 
